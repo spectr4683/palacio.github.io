@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Elegante</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Header */
+        .header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .header .logo h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .header .logo p {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hotel-hero.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero-content h2 {
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .btn {
+            background-color: #8b7355;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #6b5a4a;
+        }
+
+        /* Habitaciones */
+        .rooms {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .rooms h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .room-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .room-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .room-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .room-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .room-card h3 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        /* Reservas y Contacto */
+        .reservation, .contact {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .reservation h2, .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background-color: #8b7355;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #6b5a4a;
+        }
+
+        /* Descuentos */
+        .discounts {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .discounts h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .discounts ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .discounts ul li {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Hotel Elegante</h1>
+            <p>Lujo y confort en cada detalle</p>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#habitaciones">Habitaciones</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#descuentos">Ofertas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Bienvenido al Hotel Elegante</h2>
+            <p>Experimente el lujo en su máxima expresión.</p>
+            <a href="#reservas" class="btn">Reservar Ahora</a>
+        </div>
+    </section>
+
+    <section id="habitaciones" class="rooms">
+        <h2>Nuestras Habitaciones</h2>
+        <div class="room-grid">
+            <div class="room-card">
+                <img src="https://image-tc.galaxy.tf/wijpeg-8kgyam0ihk36x6tlixb5nyqja/mexicali-estandar2_wide.jpg?crop=0%2C99%2C1900%2C1069" alt="Habitación Estándar">
+                <h3>Habitación Estándar</h3>
+                <p>Comodidad y elegancia en un espacio acogedor.</p>
+                <a href="#reservas" class="btn">Reservar</a>
+            </div>
+            <div class="room-card">
+                <img src="https://image-tc.galaxy.tf/wijpeg-awew9kdie2qsbfszfb2kgpi1s/deluxe-2.jpg" alt="Habitación Deluxe">
+                <h3>Habitación Deluxe</h3>
+                <p>Amplia y con vistas panorámicas.</p>
+                <a href="#reservas" class="btn">Reservar</a>
+            </div>
+            <div class="room-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm57HPkLkTXGLHzmVbODXm4AuLv9868pmzmg&s" alt="Suite Presidencial">
+                <h3>Suite Presidencial</h3>
+                <p>El epítome del lujo y la exclusividad.</p>
+                <a href="#reservas" class="btn">Reservar</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservas" class="reservation">
+        <h2>Reserva tu Estancia</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="fecha-llegada">Fecha de Llegada:</label>
+                <input type="date" id="fecha-llegada" name="fecha-llegada" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha-salida">Fecha de Salida:</label>
+                <input type="date" id="fecha-salida" name="fecha-salida" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo-habitacion">Tipo de Habitación:</label>
+                <select id="tipo-habitacion" name="tipo-habitacion" required>
+                    <option value="estandar">Habitación Estándar</option>
+                    <option value="deluxe">Habitación Deluxe</option>
+                    <option value="suite">Suite Presidencial</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="descuento">Código de Descuento (opcional):</label>
+                <input type="text" id="descuento" name="descuento">
+            </div>
+            <button type="submit" class="btn">Reservar</button>
+        </form>
+    </section>
+
+    <section id="descuentos" class="discounts">
+        <h2>Ofertas Exclusivas</h2>
+        <p>Aprovecha nuestras promociones especiales:</p>
+        <ul>
+            <li>20% de descuento en reservas anticipadas.</li>
+            <li>Estadías prolongadas con tarifas reducidas.</li>
+            <li>Paquetes todo incluido para escapadas románticas.</li>
+        </ul>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <p>Estamos aquí para ayudarte. Contáctanos para más información.</p>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023 Hotel Elegante. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
